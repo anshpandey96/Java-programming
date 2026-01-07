@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class swap {
+
+     static void main(String[] args) {
+         System.out.println(" Swaping two Numbers : - ");
+
+         Scanner scanner = new Scanner(System.in);
+         System.out.println(" Enter the first number :- ");
+         int a =  scanner.nextInt();
+         System.out.println("Enter the second number:- ");
+         int b = scanner.nextInt();
+         int temp;
+
+         // swaping
+         temp = a;
+         a = b;
+         b = temp;
+
+
+         System.out.println("Swapping done ......");
+         System.out.println(" First Number is : " + a);
+
+         System.out.println(" Second Number is : " + b);
+     }
+
+}
