@@ -1,0 +1,21 @@
+public class learningIf {
+    public static void main(String[] args) {
+
+        boolean isSeniorCitizen = false;
+        boolean isAnAduult = true ;
+
+        if ( isSeniorCitizen )
+        {
+            System.out.println(" Hello senior Citizen ");
+        }
+          else if( isAnAduult)
+        {
+            System.out.println(" Hello Adult");
+        }
+            else
+            {
+                System.out.println(" Hello child");
+            }
+        }
+
+    }
