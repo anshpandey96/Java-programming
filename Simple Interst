@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SimpleInterst {
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Simple Interset :-\n");
+         Scanner input = new Scanner(System.in);
+
+        System.out.println(" Enter the principle:-");
+           int p = input.nextInt();
+        System.out.println(" Enter the rate :- ");
+           float r = input.nextFloat();
+        System.out.println("Enter  the Years :- ");
+        float y = input.nextFloat();
+
+          float si = (p*r*y)/100;
+
+        System.out.println("Simple Interst Amount : - "+ si );
+
+
+
+    }
+}
