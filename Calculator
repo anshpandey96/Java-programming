@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class calculator {
+
+    public static void main(String[] args) {
+         Scanner input = new Scanner(System.in);
+         int a = 5;
+         int b = 2;
+
+
+        System.out.println(" Additian     :"+ (a+b) );
+        System.out.println(" Substraction :" + (a-b));
+        System.out.println(" Multiplaction:"+ (a*b));
+        System.out.println(" Division     : "+ (a/b));
+        System.out.println(" Modules      :" + (a%b));
+
+    }
+
+
+
+}
