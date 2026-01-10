@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class LoopPatters {
+    public static void main( String []args ) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("We are here to print patters : \n ");
+        System.out.println(" Please enter the no of rows :");
+        int rows = input.nextInt();
+        printFirstPattern(rows);
+        printReverseRightHalfPyramid(rows);
+        printReverseLeftHalfPyramid(rows);
+
+    }
+    public static void printReverseLeftHalfPyramid(int maxRows) {
+        System.out.println("\n here is  Left half pyramid : ");
+        int rows = maxRows;
+        while (rows > 0) {
+       // this loop prints spaces
+            int j = 0;
+            while ( j < rows -1){
+                System.out.print("  ");
+                  j++;
+
+            }
+
+    // this loop print start
+            int i = 0;
+            while (i <= (maxRows - rows)) {
+                System.out.print("* ");
+                i++;
+            }
+            System.out.println();
+            rows--;
+
+        }
+    }
+
+        public static void printReverseRightHalfPyramid(int maxRows){
+        System.out.println("\n here is  Reverse Right half Pyramid : ");
+          int rows = maxRows;
+          while ( rows > 0){
+              int i = 0;
+              while ( i< rows){
+                  System.out.print(" *");
+                  i++;
+              }
+              System.out.println();
+              rows--;
+          }
+    }
+
+    public static void printFirstPattern(int maxRows){
+        System.out.println("\n here is  Right half Pyramid : ");
+        int rows = 0;
+        while ( rows < maxRows){
+            System.out.print("*");
+            int i = 0;
+            while ( i < rows) {
+                System.out.print(" *");
+                  i++;
+             }
+            System.out.println();
+              rows++;
+        }
+    }
+}
