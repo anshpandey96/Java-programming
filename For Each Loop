@@ -1,0 +1,21 @@
+public class ForEachLoop {
+    public static void main(String[] args) {
+        String[] array = new String[]{
+                "Ansh", "Atul", "Vineet", "pratyush"};
+        printArray(array);
+        System.out.println("For Each Loop : ");
+        printArrayForEch(array);
+    }
+    public static void printArrayForEch(String[] array){
+         for (String name : array){
+
+             System.out.println(name);
+       }
+        System.out.println("For Each Loop : ");
+    }
+     public static void printArray(String[] array){
+        for( int i = 0; i < array.length; i++){
+            System.out.println(array[i]);
+        }
+     }
+}
