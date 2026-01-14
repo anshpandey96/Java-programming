@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class EvenOddternary {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome to Even odd ternary :\n");
+        System.out.println("Please Enter Your Number:-  ");
+        int num = input.nextInt();
+        String result = num % 2 == 0 ? "Even" : "Odd";
+        System.out.println("Your number is :" + result);
+
+    }
+}
