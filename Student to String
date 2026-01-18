@@ -1,0 +1,25 @@
+import javax.xml.namespace.QName;
+public class StudentToString {
+    String name;
+    public StudentToString(String name, int age, String rollNumber, String house) {
+        this.name = name;
+        this.age = age;
+        this.rollNumber = rollNumber;
+        this.house = house;
+    }
+    int age;
+    String rollNumber;
+    String house;
+
+
+   public  String toString() {
+       return " Student Details:{name:" + name
+               + "age: "+ age
+               + "roll number :"+ rollNumber + " house: "+ house + " }";
+   }
+
+   public static void main(String[] args ) {
+       StudentToString stu = new StudentToString(" Ansh " ,19, "101", "rapti");
+       System.out.println(stu);
+   }
+}
