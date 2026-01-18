@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class GuessingGame {
+    int random;
+    GuessingGame(){
+        random = (int)Math.ceil(Math.random() * 100);
+
+    }
+    /**
+     *
+     * @param guessNumber the number that playar guessed
+     * @return Negative if the guessed number is smaller
+     * - 0 if the guessed number is correct.
+     * - postitive if the gussed number is higher .
+     */
+    int guess( int guessNumber){
+        return guessNumber - random;
+    }
+
+    public static void main(String[] args) {
+         Scanner input = new Scanner(System.in );
+         GuessingGame game = new GuessingGame();
+        System.out.println("Welcome to the guessing game " +
+                "Guess the number between 0 to 10 " );
+
+        int guess;
+        int result;
+
+        do {
+            System.out.println("Guess the number :");
+            guess = input.nextInt();
+            result = game.guess(guess);
+            if (result == 0 ) {
+                System.out.println("Congrates , your guess is correct ");
+            }
+            else if( result < 0){
+                System.out.println("Please guess higher ");
+            }else{
+                System.out.println(" please Guess Lower");
+            }
+           } while( result != 0);
+
+    }
+}
