@@ -1,0 +1,8 @@
+package in.ansh.Abstraction;
+
+public interface Transpost {
+
+    public abstract void getSetGo();
+
+
+}
