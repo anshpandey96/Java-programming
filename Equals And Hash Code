@@ -1,0 +1,21 @@
+package in.ansh.equals;
+
+public class EqualsAndHashCodeTest {
+
+    public static void main(String[] args) {
+
+         Person person1 = new Person( "Ansh", 19,  "101");
+        Person person2 = new Person( "Ansh", 19,  "101");
+
+   //      if( person1 == person2){  // reference compare
+
+             if(person1.equals(person2)){
+
+             System.out.println("Equals");
+             } else{
+
+             System.out.println("Not equal");
+         }
+
+    }
+}
