@@ -1,0 +1,9 @@
+package polymorphism;
+
+public class Plane implements Vehicle {
+
+    @Override
+    public void start() {
+        System.out.println("Plan is staring taking off ");
+    }
+}
