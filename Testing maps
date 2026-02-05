@@ -1,0 +1,21 @@
+package in.ansh.map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TesingMaps {
+
+     public static void main( String[] args){
+
+         Map<String,Integer> map = new HashMap<>();
+         map.put("Ansh",34);
+         map.put("Pandey", 100);
+         map.put("Atul", 100);
+         map.put("Ram ", 0);
+
+         System.out.println(map.size());
+         System.out.println(map.get("Ansh"));
+         System.out.println(map.containsKey("geetab"));
+
+     }
+}
