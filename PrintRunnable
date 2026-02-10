@@ -1,0 +1,22 @@
+package executer;
+
+import challenge100.PrintThread;
+
+public class PrintRunnable implements Runnable {
+
+    @Override
+    public void run(){
+
+        for ( int i = 1; i<= 1000; i++){
+
+            System.out.printf("%d :%c", i,targetChar);
+        }
+        System.out.printf("\n%c Task Done \n", targetChar);
+    }
+
+    private final char targetChar;
+      public PrintRunnable ( char targetChar){
+          this.targetChar = targetChar;
+
+    }
+}
