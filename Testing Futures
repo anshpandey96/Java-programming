@@ -1,0 +1,44 @@
+package executer;
+
+import future.FetchName;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class TestingFutures {
+
+    public static void main(String[] args) {
+        // Create a fixed thread pool with 3 threads
+        ExecutorService service = Executors.newFixedThreadPool(3);
+
+        FetchName task1 = new FetchName("Ansh Pandey");
+        FetchName task2 = new FetchName("Atul Upadhyay");
+        FetchName task3 = new FetchName("vineet");
+        FetchName task4 = new FetchName("Pratyush");
+        service.submit(task1);
+
+
+        // Example: submit a Callable task
+        Callable<String> task = () -> {
+            Thread.sleep(2000);
+            return "Task finished!";
+        };
+
+        try {
+            String name1  = service.submit(task1).get();
+            String name2 = service.submit(task2).get();
+            String name3 = service.submit(task3).get();
+            String name4 = service.submit(task4).get();
+
+            System.out.println(name1);
+            System.out.println(name2);
+            System.out.println(name3);
+            System.out.println(name4);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        service.shutdown();
+    }
+}
