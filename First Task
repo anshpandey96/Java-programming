@@ -1,0 +1,16 @@
+package in.ansh.Multithreading;
+
+public class FirstTask extends Thread {
+
+    @Override
+    public void run(){
+        // first task...
+
+        for (int i = 0;  i<= 1000; i++) {
+            System.out.printf("%d*",i);
+        }
+        System.out.printf("\n %s * task complete",
+                Thread.currentThread().getName());
+
+    }
+}
