@@ -1,0 +1,15 @@
+package challenge101;
+
+class TrafficLightTest {
+    public static void main(String[] args) {
+        // Create threads for each color
+        TrafficLightThread redLight = new TrafficLightThread(TrafficColor.RED);
+        TrafficLightThread greenLight = new TrafficLightThread(TrafficColor.GREEN);
+        TrafficLightThread yellowLight = new TrafficLightThread(TrafficColor.YELLOW);
+
+        // Start them
+        redLight.start();
+        greenLight.start();
+        yellowLight.start();
+    }
+}
