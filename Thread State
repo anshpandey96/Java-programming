@@ -1,0 +1,18 @@
+ package challenge99;
+public class ThreadState extends Thread {
+
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(4000); // sleep for 4 seconds
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void main(String[] args) {
+        ThreadState t1 = new ThreadState();
+        t1.start();
+        System.out.println("Thread started...");
+    }
+}
