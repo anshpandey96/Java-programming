@@ -1,0 +1,22 @@
+package challenge100;
+
+public class TestingJoin {
+    public static void main(String[] args) {
+        PrintThread t1 = new PrintThread(1);
+        PrintThread t2 = new PrintThread(2);
+        PrintThread t3 = new PrintThread(3);
+
+        try {
+            t1.start();
+            t1.join();   // wait for t1 to finish
+
+            t2.start();
+            t2.join();   // wait for t2 to finish
+
+            t3.start();
+            t3.join();   // wait for t3 to finish
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
